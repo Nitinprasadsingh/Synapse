@@ -1,0 +1,1 @@
+["temperature_2m (\u00b0C)", "relative_humidity_2m (%)", "dew_point_2m (\u00b0C)", "cloud_cover (%)", "wind_speed_10m (km/h)", "wind_direction_10m (\u00b0)", "shortwave_radiation (W/m\u00b2)", "direct_radiation (W/m\u00b2)", "diffuse_radiation (W/m\u00b2)", "direct_normal_irradiance (W/m\u00b2)", "hour_sin", "hour_cos", "month", "dayofweek"]

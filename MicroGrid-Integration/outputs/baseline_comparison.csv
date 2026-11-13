@@ -1,0 +1,13 @@
+Metric,A_NoBattery,B_RuleBased,C_MPC,%_Improvement_MPC_vs_A_NoBattery,%_Improvement_MPC_vs_B_RuleBased
+total_grid_import_kwh,557.6087,481.6087,492.6119,11.656346107942722,-2.284676335788783
+total_grid_export_kwh,64.0598,0.0,0.0,-100.0,
+total_electricity_cost,57.117,49.5615,51.8423,9.234903793966764,-4.60195918202637
+solar_self_consumption_percent,80.06,100.0,100.0,24.906320259805142,0.0
+solar_utilization_percent,100.0,100.0,100.0,0.0,0.0
+total_curtailment_kwh,0.0,0.0,0.0,,
+total_battery_charge_kwh,0.0,64.0598,64.0598,,0.0
+total_battery_discharge_kwh,0.0,76.0,64.9968,,-14.477894736842115
+battery_throughput_kwh,0.0,70.0299,64.5283,,7.8560729060015735
+soc_violations,0.0,0.0,0.0,,
+peak_grid_import_kw,41.0571,41.0571,41.0571,0.0,0.0
+grid_dependency_percent,68.43,59.11,60.46,11.646938477276056,-2.2838775164946736

@@ -1,0 +1,16 @@
+========================================================================
+B.Tech Major Project: Electricity Load Forecasting Report
+========================================================================
+Geographic Region: Maricopa County, Arizona (Phoenix Area)
+Time Range: January 2017 to December 2019
+
+Test Set Results Summary:
+- Persistence Baseline: MAE = 242.08 MW, RMSE = 305.26 MW, R2 = 0.9739
+- Seasonal Persistence: MAE = 381.13 MW, RMSE = 525.93 MW, R2 = 0.9225
+- XGBoost Regressor:    MAE = 107.68 MW, RMSE = 154.44 MW, R2 = 0.9933
+
+Percentage Improvement over Persistence:
+- MAE: 55.52%
+- RMSE: 49.41%
+
+========================================================================

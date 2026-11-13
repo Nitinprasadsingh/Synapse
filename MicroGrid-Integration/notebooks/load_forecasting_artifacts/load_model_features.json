@@ -1,0 +1,31 @@
+{
+    "features": [
+        "Hour_sin",
+        "Hour_cos",
+        "DayOfWeek_sin",
+        "DayOfWeek_cos",
+        "Month_sin",
+        "Month_cos",
+        "Hour",
+        "DayOfWeek",
+        "DayOfMonth",
+        "Month",
+        "DayOfYear",
+        "IsWeekend",
+        "Load_lag_1",
+        "Load_lag_2",
+        "Load_lag_3",
+        "Load_lag_6",
+        "Load_lag_12",
+        "Load_lag_24",
+        "Load_lag_48",
+        "Load_lag_168",
+        "RollingMean_3",
+        "RollingMean_6",
+        "RollingMean_24",
+        "RollingMean_168",
+        "RollingStd_24",
+        "RollingStd_168"
+    ],
+    "target": "Target_Load"
+}

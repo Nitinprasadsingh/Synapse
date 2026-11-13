@@ -1,0 +1,10 @@
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+venv
+.pytest_cache
+.coverage
+htmlcov
+microgrid.db
+.git

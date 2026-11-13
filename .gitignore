@@ -1,0 +1,29 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Python environments and generated files
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Node.js dependencies and build output
+node_modules/
+.next/
+
+# Local databases and runtime logs
+*.db
+*.sqlite
+*.sqlite3
+*.log
+*.out
+*.err
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

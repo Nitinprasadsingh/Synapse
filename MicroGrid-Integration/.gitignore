@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+outputs/plots/
+outputs/optimized_schedule.csv
+outputs/optimization_metrics.json
