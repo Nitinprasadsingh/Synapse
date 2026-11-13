@@ -6,6 +6,41 @@
 - Node.js 18+ with frontend dependencies installed.
 - Saved model artifacts under `MicroGrid-Integration/notebooks`.
 
+## Setup after downloading from GitHub
+
+After cloning the repository, open a PowerShell terminal in each folder below
+and run the setup commands once.
+
+AI service — open the terminal in `MicroGrid-Integration`:
+
+```powershell
+py -3 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+```
+
+Backend — open the terminal in `Dashboard-Application\backend`:
+
+```powershell
+py -3 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+Copy-Item .env.example .env
+```
+
+Open the new `.env` file and set the local database and AI service values:
+
+```env
+DATABASE_URL=sqlite:///./microgrid.db
+AI_SERVICE_URL=http://127.0.0.1:8100
+AI_SIMULATION_START_TIME=2019-01-08T00:00:00Z
+```
+
+Frontend — open the terminal in `Dashboard-Application\frontend`:
+
+```powershell
+npm install
+Copy-Item .env.example .env.local
+```
+
 ## Start the services
 
 Open three PowerShell terminals, each in the folder specified below. These
@@ -14,20 +49,12 @@ instructions assume the repository has already been cloned locally.
 Terminal 1 — open the terminal in the `MicroGrid-Integration` folder:
 
 ```powershell
-if (-not (Test-Path .\.venv\Scripts\python.exe)) {
-    py -3 -m venv .venv
-}
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
 .\.venv\Scripts\python.exe -m uvicorn battery_optimization.api:app --host 0.0.0.0 --port 8100
 ```
 
 Terminal 2 — open the terminal in the `Dashboard-Application\backend` folder:
 
 ```powershell
-if (-not (Test-Path .\.venv\Scripts\python.exe)) {
-    py -3 -m venv .venv
-}
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
 $env:AI_SERVICE_URL = "http://127.0.0.1:8100"
 $env:AI_SIMULATION_START_TIME = "2019-01-08T00:00:00Z"
 .\.venv\Scripts\python.exe -m uvicorn app.main:app --host 0.0.0.0 --port 8000
@@ -36,7 +63,6 @@ $env:AI_SIMULATION_START_TIME = "2019-01-08T00:00:00Z"
 Terminal 3 — open the terminal in the `Dashboard-Application\frontend` folder:
 
 ```powershell
-npm install
 $env:NEXT_PUBLIC_API_URL = "http://127.0.0.1:8000/api/v1"
 npm run dev
 ```
